@@ -9,7 +9,7 @@ public class Assignment {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Velkommen til Rema, hva vil du kjøpe? ");
+        System.out.println("Velkommen til Rema1000, hva vil du kjøpe? ");
         System.out.print("Antall produkter: ");
         int antallVarer = scanner.nextInt();
 
