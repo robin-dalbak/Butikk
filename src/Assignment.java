@@ -50,6 +50,7 @@ public class Assignment {
 
         System.out.println("Billigste vare = " + billigsteVare);
         System.out.println("Dyreste vare = " + dyresteVare);
+        System.out.println("Takk for handelen, velkommen tilbake til Rema1000");
 
     }
 
