@@ -1,0 +1,196 @@
+1. Introduction to Java at Udemy
+
+SpongeCake
+
+Ingredients
+Flour
+Eggs
+Sugar
+Butter
+
+main() 	{
+	Preheat oven to 160c;
+	Sift flour into a bowl;
+	Sift in sugar;
+	Sift in bicarbonate of soda;
+	Mix together;
+	Crack eggs into a bowl;
+	Mix tighter well;
+	Scoop bowl contets into tin;
+	Place tin in oven for 25min;
+}
+
+decorations() 	 	{
+	Apply icing to the top of the cake
+	Spread the icing with a knife
+	Add sprinkles
+}
+
+}
+
+2. Writing and printing
+
+// \n - newline = ny linje
+// \t - tab =mellomrom
+// \b - backspace = fjerner bokstaven foran
+// \ - kun en backslash foran tegnet " gjør at koden ikke stopper
+// \\ - man må ha en ekstra backslash for å skrive en singel backslash
+
+
+4. Variabler
+
+ // x = 10
+        // x + 5 = 15
+
+        // a = 7
+        // b = 19
+        // b - a = 12
+
+        // violin = 2
+        // budgerigar = 8
+        // violin * budgerigar = 16
+
+        //  + - * / alle disse er operators, plus operator, subtraction operator etc.
+        // = = assignment operator, denne assigner alltid value på høyre sammen med variabelen til venstre
+        // () akkurat som i matte kan man bruke disse
+
+        I java er det TO kategorier som datatypene går inn i, "primitive types" og "reference types".
+        Man kan nesten alltid bruke "int" med mindre systemet har lite minne da bruker man "short" og "byte".
+        double er default for decimals og int er default for integers
+        Skal man regne ut noe, skriv tallet 15 som 15.0.
+        Char er unicode, 0-65535 så den printer ut symboler og bokstaver. f.eks 65 opp til 90 er a-Z
+        String er mange karakterer, mens Char bare er 1 karakter om gangen.
+        // variable names kan kun inneholde 4 ting, letters, numbers123, underscore_ and dollar sign$
+
+        int age = 27;
+                double statueHightInMetres = 14.27;
+                boolean hasDriversLicence = false;
+                char userInput = '\u005a';
+                String name = "Jeff";
+                Scanner a = new Scanner(System.in);
+
+
+5. User input
+
+import java.util.Scanner;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+     System.out.println("What is your name?");
+     String userName = scanner.next();
+     System.out.println(userName + " is a nice name.");
+
+
+     System.out.println("How old are you, " + userName + "?");
+     int userAge = scanner.nextInt();
+     System.out.println("Your Name is " + userName + " and you are " + userAge + " years old.");
+
+     System.out.println("How tall are you in metres");
+     double userHeight = scanner.nextDouble();
+     System.out.println("You are " + userHeight + " metres tall.");
+
+
+public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What is your name?");
+        String name = scanner.nextLine();
+        System.out.println("Your name is " + name);
+
+6. Conditional Statements
+        > greater than
+        <= greater than or equal to
+        < less than
+        <= less than equal to
+        == equal to
+        != not equal to
+
+        || Logical OR
+        - at least one has to be true
+        true || true - true
+        true || false - true
+        false || true - true
+        false || false - false
+
+        && Logical AND
+        - both have to be true
+        true && true - true
+        true && false - false
+        false && true - false
+        false && false - false
+
+
+
+
+
+        if = hvis noe er riktig så printer den ut dét. f. eks hvis noe er mindre enn tillatt verdi.
+        else if = plasseres under if, hvis f.eks noe er mer enn tillatt verdi aka false.
+        else = plasseres under else if, hvis ingen av de ovenfor treffer. f.eks hvis noe er midt i tillatt verdi. JAVA leser nedover hele veien til riktig verdi kommer opp også printer den det.
+        Ellers så kan man gjøre det mer kompakt hvor man legger til "else if" i "if", kjent som "logical OR operator"
+        da putter man "pied-epipe ||" mellom -> if (height < 130|| height > 210 )
+
+
+       Create a RNG --------
+
+       import java.util.Scanner;
+       import java.util.concurrent.ThreadLocalRandom;
+
+
+       public class Main {
+
+           public static void main(String[] args) {
+
+               int randomNumber = ThreadLocalRandom.current().nextInt(1, 6);
+
+               System.out.println("I'm thinking of a number from 1 to 5. Try to guess it");
+               System.out.print("Your Guess: ");
+               Scanner scanner = new Scanner(System.in);
+               int guess = scanner.nextInt();
+
+
+               }
+               else {
+                   System.out.println("Wrong! Have another go.");
+                   System.out.print("Your guess: ");
+                   guess = scanner.nextInt();
+
+                   if (guess == randomNumber) {
+                       System.out.println("Correct! About time.");
+                   }
+                   else {
+                       System.out.println("Wrong again! Maybe next time.");
+                   }
+
+               }
+-------------------------------------
+
+7. Loops
+
+           While loops
+
+           int i = 0;
+
+                   while (5 < 10) {
+                       System.out.println("Test");
+                       i = i + 1;
+                       i += 1;
+                       i++
+         Alle de over vil increment by one for hver runde "while " loopen går.
+
+         Mens på den under her vil "while-loopen" gå kun 10 ganger, dette er fordi det blir lagt 1 på "i" for hver runde den går
+
+         int i = 0;
+
+                 while (i < 10) {
+                     System.out.println("Test");
+                     i++;
+
+
+
+
+
