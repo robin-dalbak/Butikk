@@ -63,6 +63,8 @@ public class Main {
         System.out.print(m);
         Scanner scan = new Scanner(System.in);
         return scan.nextDouble();
+
+
     }
 
     private static String getItemName(String m) {

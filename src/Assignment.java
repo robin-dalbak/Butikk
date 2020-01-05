@@ -14,25 +14,42 @@ public class Assignment {
         int antallVarer = scanner.nextInt();
 
 
-        double[] lapTimes = new double[antallVarer];
+        double[] priser = new double[antallVarer];
+        String[] varer = new String[antallVarer];
 
         for (int i = 0; i < antallVarer; i++) {
-            System.out.println("Produkt # ");
-            System.out.print("Lap time: ");
-            lapTimes[i] = scanner.nextDouble();
+            System.out.print("Vare: ");
+            varer[i] = scanner.next();
+            System.out.print("Pris: ");
+            priser[i] = scanner.nextDouble();
         }
 
+        System.out.println("Handleliste: ");
+        String billigsteVare = varer[0];
+        double billigstePris = priser[0];
 
-        double fastestTime = lapTimes[0];
-        for (int i = 1; i < lapTimes.length; i++) {
-            if (lapTimes[i] < fastestTime) {
-                fastestTime = lapTimes[i];
+
+        String dyresteVare = null;
+        for (int i = 0; i < antallVarer; i++) {
+            System.out.println(varer[i] + ": " + priser[i]);
+            if (billigstePris > priser[i]) {
+                billigsteVare = varer[i];
+                billigstePris = priser[i];
 
             }
+            dyresteVare = varer[1];
+            double dyrestePris = priser[1];
+
+            if (dyrestePris < priser[0]) {
+                dyresteVare = varer[0];
+                dyrestePris = priser[0];
+
+            }
+
         }
 
-        System.out.println("Fastest time: " + fastestTime);
-
+        System.out.println("Billigste vare = " + billigsteVare);
+        System.out.println("Dyreste vare = " + dyresteVare);
 
     }
 
